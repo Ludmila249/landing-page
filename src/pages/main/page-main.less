@@ -1,0 +1,44 @@
+@import '../../styles/helpers';
+
+.page-main {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-image: url(../../images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.present {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 579px;
+  height: 737px;
+}
+
+.present-1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 354px;
+  height: 500px;
+  z-index: 0;
+}
+
+@media (max-width: 1024px) {
+  .present {
+    display: none;
+  }
+
+  .present-1 {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .page-main {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}

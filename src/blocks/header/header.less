@@ -1,0 +1,64 @@
+@import '../../styles/helpers';
+
+.header {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 64px;
+
+  &__wrapper {
+    margin: 0 auto;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__logo {
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+
+    &--logo-1 {
+      padding-right: 30px;
+      border-right: 1px solid #C2D2E9;
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+
+    &--logo-2 {
+      padding-left: 30px;
+      padding-top: 17.5px;
+      padding-bottom: 17.5px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    margin-bottom: 9px;
+
+    &__wrapper {
+      padding-top: 24px;
+    }
+
+    &__logo {
+      display: flex;
+      vertical-align: middle;
+      align-items: center;
+
+      &--logo-1 {
+        width: 70px;
+        padding-right: 17px;
+        padding-top: 9px;
+        padding-bottom: 9px;
+      }
+
+      &--logo-2 {
+        width: 143px;
+        padding-left: 17px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@import '../../styles/helpers';
+
+.footer {
+  width: 100%;
+  height: auto;
+  padding-bottom: 30px;
+
+  &__text {
+    width: 53%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #102752;
+    opacity: 0.3;
+  }
+
+  &__info-wrap {
+    margin: 0 auto;
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__wrap-block {
+    display: flex;
+  }
+
+  &__info {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    color: #102752;
+    opacity: 0.5;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    padding: 0 24px;
+
+    &__text {
+      width: 100%;
+      margin: 0;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    &__info-wrap {
+      width: 100%;
+      display: block;
+      margin: 0;
+    }
+
+    &__info {
+      margin-bottom: 20px;
+    }
+  }
+}

@@ -1,0 +1,81 @@
+@import '../../styles/helpers';
+
+.title {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin-bottom: 60px;
+
+  &__mobail-bg {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 300px;
+  }
+
+  &__position {
+    max-width: 528px;
+    height: 272px;
+    background-image: url(../../images/present-mobail.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+  }
+
+  &__holiday {
+    width: 600px;
+    margin: 0 auto;
+    margin-bottom: 32px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 84px;
+    line-height: 100%;
+    text-align: center;
+    color: #1134B5;
+  }
+
+  &__text {
+    width: 625px;
+    margin: 0 auto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    color: #102;
+  }
+}
+
+@media (max-width: 1024px) {
+  .title {
+    margin-bottom: 40px;
+
+    &__img {
+      display: flex;
+    }
+
+    &__holiday {
+      font-size: 30px;
+      width: 80%;
+    }
+
+    &__text {
+      font-size: 16px;
+      width: 80%;
+    }
+
+    &__mobail-bg {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .title {
+    &__img {
+      margin-left: -30px;
+    }
+  }
+}
