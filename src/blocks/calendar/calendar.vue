@@ -8,11 +8,11 @@
         :breakpoints="{
           '640': {
             slidesPerView: 4,
-            spaceBetween: 20,
+            spaceBetween: 0,
           },
           '768': {
             slidesPerView: 5,
-            spaceBetween: 20,
+            spaceBetween: 0,
           },
           '1100': {
             slidesPerView: 7,
@@ -51,15 +51,15 @@
         :breakpoints="{
           '640': {
             slidesPerView: 4,
-            spaceBetween: 20,
+            spaceBetween: 0,
           },
           '768': {
             slidesPerView: 5,
-            spaceBetween: 40,
+            spaceBetween: 0,
           },
           '1100': {
             slidesPerView: 6,
-            spaceBetween: 20,
+            spaceBetween: 0,
           },
           '1400': {
             slidesPerView: 8,
@@ -154,7 +154,7 @@ export default {
 }
 
 .w-100 {
-  width: 90%;
+  width: auto;
 }
 
 .ml-auto,
