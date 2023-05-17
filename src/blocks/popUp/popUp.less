@@ -389,8 +389,14 @@
 
 @media (max-width: 600px) {
   .popup {
+    &__card-block-left {
+      width: 100%;
+      max-width: 100%;
+    }
+
     &__wpap-link {
       display: block;
+      width: 100%;
     }
 
     &__container {
@@ -464,6 +470,15 @@
       &::before {
         transform: rotate(-45deg);
       }
+    }
+
+    &__film-button,
+    &__issue-card,
+    &__link-more {
+      max-width: 450px;
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 10px;
     }
   }
 }
