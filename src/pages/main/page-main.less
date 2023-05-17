@@ -7,23 +7,60 @@
   background-image: url(../../images/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
 
 .present {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 579px;
-  height: 737px;
+  bottom: -185px;
+  left: -405px;
+  width: 981px;
+  height: 981px;
+
+  &:hover {
+    animation: shake 0.6s;
+    animation-iteration-count: infinite;
+  }
 }
 
 .present-1 {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 354px;
-  height: 500px;
+  top: -40px;
+  right: -210px;
+  width: 666px;
+  height: 666px;
   z-index: 0;
+
+  &:hover {
+    animation: shake 0.6s;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(2px, -2px);
+  }
+
+  40% {
+    transform: translate(2px, 2px);
+  }
+
+  60% {
+    transform: translate(-2px, 2px);
+  }
+
+  80% {
+    transform: translate(-2px, -2px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
 }
 
 @media (max-width: 1024px) {

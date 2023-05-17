@@ -6,7 +6,9 @@
     <title-block />
     <calendar-block :array-items="arrayIteration" @eventClick="eventClick" />
     <footer-block />
-    <pop-up-block v-if="openPopup" :item-data="itemData" @clickCLose="clickCLose" />
+    <transition name="popup">
+      <pop-up-block v-if="openPopup" :item-data="itemData" @clickCLose="clickCLose" />
+    </transition>
   </div>
 </template>
 
@@ -314,9 +316,9 @@ export default {
   },
   computed: {
     arrayIteration() {
-      const data = new Date().getDate();
+      // const data = new Date().getDate();
       return this.arrayItems.map((elem) => {
-        if (elem.number === data) {
+        if (elem.number === 27) {
           elem.active = true;
           this.isDayBlocked = true;
           return elem;
@@ -334,7 +336,6 @@ export default {
   },
   methods: {
     eventClick(item) {
-      console.log('click-3', item.number);
       this.openPopup = true;
       this.itemData = { ...item };
       console.log('itemData', this.itemData);

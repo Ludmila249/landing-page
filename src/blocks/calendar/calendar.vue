@@ -2,27 +2,10 @@
   <div class="slider">
     <div class="container">
       <swiper
-        :slides-per-view="8"
-        :space-between="10"
+        slides-per-view="auto"
+        :space-between="0"
+        :update-on-window-resize="false"
         :grab-cursor="true"
-        :breakpoints="{
-          '640': {
-            slidesPerView: 4,
-            spaceBetween: 0,
-          },
-          '768': {
-            slidesPerView: 5,
-            spaceBetween: 0,
-          },
-          '1100': {
-            slidesPerView: 7,
-            spaceBetween: 0,
-          },
-          '1400': {
-            slidesPerView: 8,
-            spaceBetween: 0,
-          },
-        }"
         @swiper="onSwiper"
         @slideChange="onSlideChange"
       >
@@ -34,38 +17,13 @@
         >
           <day-block :item="item" @clickHandler="eventClick" />
         </swiper-slide>
-        <!-- <swiper-slide v-for="n in 12" :key="n" class="test" :class="{ test_2: true }">
-          <div class="slider__item">
-            <img class="slider__item-icon" src="@/images/Huge-icon.png" />
-            <p class="slider__item-text">{{ data }}</p>
-          </div>
-          <day-block />
-        </swiper-slide> -->
       </swiper>
     </div>
     <div class="contaner-2">
       <swiper
-        :slides-per-view="8"
-        :space-between="10"
+        slides-per-view="auto"
+        :space-between="0"
         :grab-cursor="true"
-        :breakpoints="{
-          '640': {
-            slidesPerView: 4,
-            spaceBetween: 0,
-          },
-          '768': {
-            slidesPerView: 5,
-            spaceBetween: 0,
-          },
-          '1100': {
-            slidesPerView: 6,
-            spaceBetween: 0,
-          },
-          '1400': {
-            slidesPerView: 8,
-            spaceBetween: 0,
-          },
-        }"
         @swiper="onSwiper"
         @slideChange="onSlideChange"
       >
@@ -134,9 +92,6 @@ export default {
       console.log('click-2', item.number);
       this.$emit('eventClick', item);
     },
-    getImageUrl(imageId) {
-      return `https://picsum.photos/600/400/?image=${imageId}`;
-    },
     onSwiper(swiper) {
       console.log(swiper);
     },
@@ -154,7 +109,7 @@ export default {
 }
 
 .w-100 {
-  width: auto;
+  width: 100%;
 }
 
 .ml-auto,
@@ -165,6 +120,10 @@ export default {
 .mr-auto,
 .mx-auto {
   margin-right: auto;
+}
+
+.test.swiper-slide.test_2 {
+  width: auto !important;
 }
 
 .test {

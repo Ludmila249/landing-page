@@ -6,20 +6,12 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 3;
   height: auto;
   overflow-y: auto;
   padding-bottom: 48px;
   box-sizing: border-box;
-
-  &__wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #0000006B;
-    z-index: -1;
-  }
+  background: #0000006B;
 
   &__container {
     position: relative;
@@ -32,6 +24,22 @@
     padding-top: 44px;
     z-index: 1;
     margin-bottom: 40px;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &-enter-active,
+  &-leave-active {
+    transition: opacity 0.3s ease-in;
+  }
+
+  &-enter,
+  &-leave-to {
+    opacity: 0;
+
+    .popup__container {
+      transform: translateY(-100px);
+    }
   }
 
   &__film {
@@ -333,7 +341,7 @@
   .popup {
     &__container {
       margin-top: 0;
-      border-radius: 0;
+      border-radius: 40px;
       max-width: 600px;
       margin-bottom: 0;
     }
@@ -387,6 +395,7 @@
 
     &__container {
       padding-top: 0;
+      border-radius: 0;
     }
 
     &__card,

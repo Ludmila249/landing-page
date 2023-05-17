@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="header__wrapper">
-      <div class="header__logo header__logo--logo-1">
+      <a class="header__logo header__logo--logo-1" href="https://www.vtb.ru/" target="_blank">
         <svg
           width="92"
           height="34"
@@ -18,7 +18,7 @@
             fill="#002882"
           />
         </svg>
-      </div>
+      </a>
       <a
         class="header__logo header__logo--logo-2"
         href="https://www.vtb.promo/daily?code=media_kinopoisk_dbdk&utm_source=kinopoisk&utm_medium=media&utm_campaign=media_dbdk_kinopoisk_link_logo_cpc_rf_p1_feb_apr"
