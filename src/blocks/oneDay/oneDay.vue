@@ -7,7 +7,7 @@
       </div>
       <div>
         <div class="slider-active__arrow" href="#">
-          <img src="@/images/arrow.png" />
+          <img class="slider-active__arrow-img" src="@/images/arrow.png" />
         </div>
       </div>
     </button>
@@ -39,7 +39,6 @@ export default {
   },
   methods: {
     clickHandler() {
-      console.log('click');
       this.$emit('clickHandler', this.item);
     },
   },

@@ -102,9 +102,6 @@ export default {
       default: () => {},
     },
   },
-  mounted() {
-    console.log('itemData', this.itemData);
-  },
   methods: {
     clickCLose() {
       this.$emit('clickCLose', this.item);

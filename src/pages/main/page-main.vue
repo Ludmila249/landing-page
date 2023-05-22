@@ -1,7 +1,7 @@
 <template>
   <div class="page-main">
-    <img class="present-1" src="../../images/present.png" alt="" />
-    <img class="present" src="../../images/present-revers.png" alt="" />
+    <img class="present-1" src="@/images/present.png" alt="" />
+    <img class="present" src="@/images/present-revers.png" alt="" />
     <header-block />
     <title-block />
     <calendar-block :array-items="arrayIteration" @eventClick="eventClick" />
@@ -316,9 +316,9 @@ export default {
   },
   computed: {
     arrayIteration() {
-      // const data = new Date().getDate();
+      const data = new Date().getDate();
       return this.arrayItems.map((elem) => {
-        if (elem.number === 27) {
+        if (elem.number === data) {
           elem.active = true;
           this.isDayBlocked = true;
           return elem;
@@ -331,14 +331,10 @@ export default {
       });
     },
   },
-  mounted() {
-    console.log('arrayIteration', this.arrayIteration);
-  },
   methods: {
     eventClick(item) {
       this.openPopup = true;
       this.itemData = { ...item };
-      console.log('itemData', this.itemData);
     },
     clickCLose() {
       this.openPopup = false;

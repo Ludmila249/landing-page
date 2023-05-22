@@ -4,10 +4,9 @@
       <swiper
         slides-per-view="auto"
         :space-between="0"
-        :update-on-window-resize="false"
+        :initial-slide="searchForActiveElementArrayBefore"
+        :update-on-window-resize="true"
         :grab-cursor="true"
-        @swiper="onSwiper"
-        @slideChange="onSlideChange"
       >
         <swiper-slide
           v-for="item in arrayBefore"
@@ -23,9 +22,9 @@
       <swiper
         slides-per-view="auto"
         :space-between="0"
+        :initial-slide="searchForActiveElementArrayAfter"
+        :update-on-window-resize="true"
         :grab-cursor="true"
-        @swiper="onSwiper"
-        @slideChange="onSlideChange"
       >
         <swiper-slide
           v-for="item in arrayAfter"
@@ -75,6 +74,12 @@ export default {
     },
   },
   computed: {
+    searchForActiveElementArrayBefore() {
+      return this.arrayBefore.findIndex((elem) => elem.active === true);
+    },
+    searchForActiveElementArrayAfter() {
+      return this.arrayAfter.findIndex((elem) => elem.active === true);
+    },
     arrayBefore() {
       const arrayLength = this.arrayItems.length / 2;
       return this.arrayItems.filter((elem, index) => index < arrayLength);
@@ -84,19 +89,9 @@ export default {
       return this.arrayItems.filter((elem, index) => index >= arrayLength);
     },
   },
-  mounted() {
-    console.log('arrayItems', this.arrayItems);
-  },
   methods: {
     eventClick(item) {
-      console.log('click-2', item.number);
       this.$emit('eventClick', item);
-    },
-    onSwiper(swiper) {
-      console.log(swiper);
-    },
-    onSlideChange() {
-      console.log('arrayBefore', this.arrayBefore);
     },
   },
 };

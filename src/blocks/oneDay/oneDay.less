@@ -1,6 +1,5 @@
 @import '../../styles/helpers';
 
-//попробовать сделать размеры через vw и vh
 .slider-desabled {
   width: 128px;
   height: 128px;
@@ -31,6 +30,7 @@
   border-radius: 1000px;
   margin: 0 6px;
   cursor: pointer;
+  transition: 0.3s ease;
 
   &__wrapper {
     padding-left: 20px;
@@ -65,6 +65,19 @@
     background: #1134B5;
     background-color: #1134B5;
     border-radius: 50%;
+    transition: 0.3s ease;
+  }
+
+  &__arrow-img {
+    width: 42px;
+    transition: 0.3s ease;
+  }
+
+  &:hover,
+  &:focus {
+    .slider-active__arrow-img {
+      width: 48px;
+    }
   }
 }
 
@@ -88,14 +101,27 @@
     line-height: 44px;
     letter-spacing: -0.02em;
     color: #6D8CE6;
+    transition: 0.3s ease;
   }
 
   &__text {
     font-weight: 400;
     font-size: 24px;
-    line-height: 24px;
+    line-height: 80%;
     text-align: center;
     color: #6D8CE6;
+    transition: 0.3s ease;
+  }
+
+  &:hover,
+  &:focus {
+    .slider-item__number {
+      font-size: 46px;
+    }
+
+    .slider-item__text {
+      font-size: 26px;
+    }
   }
 }
 
