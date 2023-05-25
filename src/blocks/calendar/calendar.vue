@@ -2,6 +2,8 @@
   <div class="slider">
     <div class="container">
       <swiper
+        :direction="'horizontal'"
+        :mousewheel="true"
         slides-per-view="auto"
         :space-between="0"
         :initial-slide="searchForActiveElementArrayBefore"
@@ -20,11 +22,14 @@
     </div>
     <div class="contaner-2">
       <swiper
+        :direction="'horizontal'"
+        :mousewheel="true"
         slides-per-view="auto"
         :space-between="0"
         :initial-slide="searchForActiveElementArrayAfter"
         :update-on-window-resize="true"
         :grab-cursor="true"
+        :slide-shadows="true"
       >
         <swiper-slide
           v-for="item in arrayAfter"
@@ -52,14 +57,15 @@
 </template>
 
 <script>
-import { Navigation, Pagination } from 'swiper';
+import { Navigation, Pagination, Mousewheel } from 'swiper';
 
 import { SwiperCore, Swiper, SwiperSlide } from 'swiper-vue2';
 
 // Import Swiper styles
 import 'swiper/swiper.less';
+import 'swiper/components/effect-fade';
 
-SwiperCore.use([Navigation, Pagination]);
+SwiperCore.use([Navigation, Pagination, Mousewheel]);
 
 export default {
   name: 'calendar-block',

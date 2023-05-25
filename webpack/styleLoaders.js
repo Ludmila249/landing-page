@@ -22,7 +22,23 @@ module.exports = (isProduction) => {
       loader: 'postcss-loader',
       options: {
         postcssOptions: {
-          plugins: [['postcss-preset-env']],
+          plugins: [
+            ['postcss-preset-env'],
+            [
+              'postcss-pxtorem',
+              {
+                propList: [
+                  '*',
+                  '!border-left',
+                  '!border-right',
+                  '!border-top',
+                  '!border-bottom',
+                  '!border',
+                  '!outline',
+                ],
+              },
+            ],
+          ],
         },
       },
     }
