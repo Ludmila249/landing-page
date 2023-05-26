@@ -8,8 +8,8 @@
             <img class="popup__img" :src="itemData.src" alt="Предложение" />
           </div>
           <div class="popup__block-left">
-            <h2 class="popup__title-film">{{ itemData.title }}</h2>
-            <p class="popup__text">{{ itemData.text }}</p>
+            <h2 class="popup__title-film" v-html="itemData.title" />
+            <p class="popup__text" v-html="itemData.text" />
             <a class="popup__film-button" :href="itemData.link" target="_blank" type="button">
               Посмотреть фильм
             </a>
@@ -53,7 +53,7 @@
           </div>
           <div class="popup__item-card">
             <p class="popup__conditions">2%</p>
-            <p class="popup__conditions-text">Кешбэк в популярных категориях</p>
+            <p class="popup__conditions-text">Кешбэк в&nbsp;популярных категориях</p>
           </div>
           <div class="popup__item-card">
             <p class="popup__conditions">до 30%</p>
@@ -70,7 +70,8 @@
         <div class="popup__possibility-wrap">
           <div class="popup__possibility-list">
             <p>
-              Бесплатные платежи и переводы по номеру телефона в другие банки (до 100 000 ₽/мес.)
+              Бесплатные платежи и&nbsp;переводы по номеру телефона в&nbsp;другие банки (до 100 000
+              ₽/мес.)
             </p>
           </div>
           <div class="popup__possibility-list">
@@ -78,13 +79,13 @@
           </div>
           <div class="popup__row-wrap">
             <div class="popup__possibility-list popup__possibility-list--row">
-              <p>Накопительный счёт с % за ежедневный остаток</p>
+              <p>Накопительный счёт с&nbsp;% за ежедневный остаток</p>
             </div>
             <div class="popup__possibility-list popup__possibility-list--row">
-              <p>Удобная оплата с помощью сервисов Samsung Pay или Mir Pay (для Android)</p>
+              <p>Удобная оплата с&nbsp;помощью сервисов Samsung Pay или Mir Pay (для Android)</p>
             </div>
             <div class="popup__possibility-list popup__possibility-list--row">
-              <p>16 000 банкоматов, в которых можно снимать наличные без комиссии</p>
+              <p>16 000 банкоматов, в&nbsp;которых можно снимать наличные без комиссии</p>
             </div>
           </div>
         </div>
