@@ -9,6 +9,7 @@
         :initial-slide="searchForActiveElementArrayBefore"
         :update-on-window-resize="true"
         :grab-cursor="true"
+        :auto-height="true"
       >
         <swiper-slide
           v-for="item in arrayBefore"
@@ -29,7 +30,7 @@
         :initial-slide="searchForActiveElementArrayAfter"
         :update-on-window-resize="true"
         :grab-cursor="true"
-        :slide-shadows="true"
+        :auto-height="true"
       >
         <swiper-slide
           v-for="item in arrayAfter"

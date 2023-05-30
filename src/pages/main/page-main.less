@@ -10,57 +10,30 @@
   overflow: hidden;
 }
 
-.present {
+.present-left-img-wrap {
   position: absolute;
   bottom: -50px;
   left: -279px;
   width: 750px;
   height: 640px;
-
-  &:hover {
-    animation: shake 0.6s;
-    animation-iteration-count: infinite;
-  }
+  z-index: 2;
 }
 
-.present-1 {
+.present-bottom-img {
+  width: 100%;
+}
+
+.present-top-img-wrap {
   position: absolute;
   top: -40px;
   right: -210px;
   width: 666px;
   height: 666px;
   z-index: 0;
-
-  &:hover {
-    animation: shake 0.6s;
-    animation-iteration-count: infinite;
-  }
 }
 
-@keyframes shake {
-  0% {
-    transform: translate(0);
-  }
-
-  20% {
-    transform: translate(-1px, 1px);
-  }
-
-  40% {
-    transform: translate(-1px, -1px);
-  }
-
-  60% {
-    transform: translate(1px, 1px);
-  }
-
-  80% {
-    transform: translate(1px, -1px);
-  }
-
-  100% {
-    transform: translate(0);
-  }
+.present-top-img {
+  width: 100%;
 }
 
 @media (max-width: 1024px) {

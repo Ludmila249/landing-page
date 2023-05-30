@@ -76,7 +76,7 @@
   &:hover,
   &:focus {
     .slider-active__arrow-img {
-      width: 48px;
+      width: 50px;
     }
   }
 }
@@ -92,6 +92,11 @@
   backdrop-filter: blur(48px);
   border-radius: 50%;
   cursor: pointer;
+  transition: 0.3s ease;
+
+  &:hover {
+    transform: scale(1.04);
+  }
 
   &__number {
     text-align: center;
@@ -111,17 +116,6 @@
     text-align: center;
     color: #6D8CE6;
     transition: 0.3s ease;
-  }
-
-  &:hover,
-  &:focus {
-    .slider-item__number {
-      font-size: 46px;
-    }
-
-    .slider-item__text {
-      font-size: 26px;
-    }
   }
 }
 
