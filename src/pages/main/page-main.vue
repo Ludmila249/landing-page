@@ -45,9 +45,9 @@ export default {
       arrayItems: (state) => state.bunker.arrayItems,
     }),
     arrayIteration() {
-      const data = new Date().getDate();
+      // const data = new Date().getDate();
       return this.arrayItems.map((elem) => {
-        if (elem.number === data) {
+        if (elem.number === 27) {
           elem.active = true;
           this.isDayBlocked = true;
           return elem;
