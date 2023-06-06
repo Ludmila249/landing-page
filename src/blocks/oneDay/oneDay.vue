@@ -1,5 +1,5 @@
 <template>
-  <div v-if="item.active" class="slider-active__wrap">
+  <div v-if="item.active" class="slider-active__container">
     <button type="button" class="slider-active" @click="clickHandler">
       <div class="slider-active__wrapper">
         <p class="slider-active__data">{{ item.number }}</p>
@@ -12,13 +12,13 @@
       </div>
     </button>
   </div>
-  <div v-else-if="item.disabled">
+  <div v-else-if="item.disabled" class="slider-active__container">
     <button type="button" class="slider-desabled">
       <img class="slider-desabled__item-icon" src="@/images/Huge-icon.png" />
       <p class="slider-desabled__item-text">{{ item.number }} {{ item.month }}</p>
     </button>
   </div>
-  <div v-else class="slider-item__wrap">
+  <div v-else class="slider-item__container">
     <button type="button" class="slider-item" @click="clickHandler">
       <div class="slider-item__wrapper">
         <p class="slider-item__number">{{ item.number }}</p>

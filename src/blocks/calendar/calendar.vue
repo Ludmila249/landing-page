@@ -4,6 +4,7 @@
       <swiper
         :direction="'horizontal'"
         :mousewheel="true"
+        :slides-per-group="2"
         slides-per-view="auto"
         :space-between="0"
         :centered-slides="true"
@@ -27,6 +28,7 @@
       <swiper
         :direction="'horizontal'"
         :mousewheel="true"
+        :slides-per-group="2"
         slides-per-view="auto"
         :space-between="0"
         :centered-slides="true"

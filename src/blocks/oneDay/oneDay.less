@@ -3,11 +3,16 @@
 .slider-desabled {
   width: 128px;
   height: 128px;
-  margin: 0 6px;
+  // margin: 0 6px;
   text-align: center;
   background: rgba(1, 65, 255, 0.06);
   backdrop-filter: blur(48px);
   border-radius: 50%;
+  font-family: @font-kp;
+
+  &__container {
+    padding: 0 6px;
+  }
 
   &__item-text {
     font-style: normal;
@@ -28,14 +33,14 @@
   height: 128px;
   background: #FFF;
   border-radius: 1000px;
-  margin: 0 6px;
+  font-family: @font-kp;
+  // margin: 0 6px;
   cursor: pointer;
   transition: 0.3s ease;
 
-  // &__wrap {
-  //   padding-right: 15px;
-  //   padding-left: 6px;
-  // }
+  &__container {
+    padding: 0 6px;
+  }
 
   &__wrapper {
     padding-left: 20px;
@@ -81,16 +86,17 @@
   &:hover,
   &:focus {
     .slider-active__arrow-img {
-      width: 50px;
+      width: 48px;
     }
   }
 }
 
 .slider-item {
+  font-family: @font-kp;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 6px;
+  // margin: 0 6px;
   width: 128px;
   height: 128px;
   background: rgba(1, 65, 255, 0.06);
@@ -100,13 +106,13 @@
   cursor: pointer;
   transition: 0.3s ease;
 
-  &:hover {
-    transform: scale(1.04);
+  &__container {
+    padding: 0 6px;
   }
 
-  // &__wrap {
-  //   padding: 0 6px;
-  // }
+  &:hover {
+    transform: scale(1.06);
+  }
 
   &__number {
     text-align: center;
