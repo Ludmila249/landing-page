@@ -3,7 +3,6 @@
 .slider-desabled {
   width: 128px;
   height: 128px;
-  // margin: 0 6px;
   text-align: center;
   background: rgba(1, 65, 255, 0.06);
   backdrop-filter: blur(48px);
@@ -34,7 +33,6 @@
   background: #FFF;
   border-radius: 1000px;
   font-family: @font-kp;
-  // margin: 0 6px;
   cursor: pointer;
   transition: 0.3s ease;
 
@@ -96,7 +94,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  // margin: 0 6px;
   width: 128px;
   height: 128px;
   background: rgba(1, 65, 255, 0.06);
@@ -139,9 +136,12 @@
   .slider-desabled {
     width: 100px;
     height: 100px;
-    margin: 0 3px;
     border-radius: 50%;
     margin-bottom: 6px;
+
+    &__container {
+      padding: 0 3px;
+    }
 
     &__item-text {
       font-weight: 400;
@@ -158,8 +158,11 @@
   .slider-active {
     width: 100px;
     height: 100px;
-    margin: 0 3px;
     margin-bottom: 6px;
+
+    &__container {
+      padding: 0 3px;
+    }
 
     &__wrapper {
       padding-left: 0;
@@ -183,10 +186,13 @@
   }
 
   .slider-item {
-    margin: 0 3px;
     width: 100px;
     height: 100px;
     margin-bottom: 6px;
+
+    &__container {
+      padding: 0 3px;
+    }
 
     &__number {
       font-size: 24px;

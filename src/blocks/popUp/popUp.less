@@ -15,7 +15,8 @@
 
   &__container {
     position: relative;
-    max-width: 995px;
+    max-width: 950px;
+    width: 100%;
     margin: 0 auto;
     margin-top: 53px;
     background: #FFF;
@@ -128,26 +129,37 @@
     margin-bottom: 20px;
   }
 
+  &__wrap-button {
+    position: relative;
+    display: block;
+    width: fit-content;
+  }
+
   &__film-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
     width: 236px;
     height: 60px;
     background: linear-gradient(90deg, #1538F5 0%, #3A83F7 83.17%);
     border-radius: 13px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.06);
+    }
+  }
+
+  &__button-text {
+    position: absolute;
+    top: calc((100% - 20px) / 2);
+    left: calc((100% - 166px) / 2);
     font-family: @font-kp;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    line-height: 24px;
+    line-height: 100%;
     color: #FFF;
-    margin-bottom: 48px;
-    transition: 0.3s ease;
-
-    &:hover {
-      transform: scale(1.03);
-    }
+    pointer-events: none;
   }
 
   &__img {
@@ -161,6 +173,7 @@
     padding: 44px 43px 50px 43px;
     margin-bottom: 44px;
     border-radius: 60px;
+    margin-top: 48px;
   }
 
   &__card-wrap {
@@ -221,40 +234,64 @@
     height: 60px;
     background: linear-gradient(90deg, #1538F5 0%, #3A83F7 83.17%);
     border-radius: 13px;
+    margin-right: 12px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.06);
+    }
+  }
+
+  &__issue-wrap {
+    position: relative;
+    width: fit-content;
+  }
+
+  &__issue-text {
+    position: absolute;
+    top: calc((100% - 18px) / 2);
+    left: calc((100% - 155px) / 2);
     font-family: @font-kp;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    line-height: 24px;
+    line-height: 100%;
     color: #FFF;
-    margin-right: 12px;
-    transition: 0.3s ease;
-
-    &:hover {
-      transform: scale(1.03);
-    }
+    pointer-events: none;
   }
 
   &__link-more {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     padding: 18px 36px;
     width: 183px;
     height: 60px;
     background: #C7DCFF;
     border-radius: 13px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.06);
+    }
+  }
+
+  &__more-wrap {
+    position: relative;
+    width: fit-content;
+  }
+
+  &__more-text {
+    position: absolute;
     font-family: @font-kp;
     font-weight: 400;
     font-size: 18px;
-    line-height: 24px;
+    line-height: 100%;
     color: #2353E0;
-    transition: 0.3s ease;
-
-    &:hover {
-      transform: scale(1.03);
-    }
+    top: calc((100% - 18px) / 2);
+    left: calc((100% - 100px) / 2);
+    pointer-events: none;
   }
 
   &__list-card {
@@ -494,6 +531,16 @@
       &::before {
         transform: rotate(-45deg);
       }
+    }
+
+    &__wrap-button,
+    &__issue-wrap,
+    &__more-wrap {
+      width: auto;
+    }
+
+    &__issue-text {
+      left: calc((100% - 140px) / 2);
     }
 
     &__film-button,
